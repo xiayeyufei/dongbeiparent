@@ -21,12 +21,15 @@ public class Generator {
         gc.setAuthor("lyl");
         //定义路径
         String path=System.getProperty("user.dir");
+        System.out.println(path);
 //        gc.setOutputDir(path+"/src/main/java");
         mpg.setGlobalConfig(gc);
         // 定义pojo路径
         String pojopath = path + "/pojo";
+        System.out.println(pojopath);
 //        String othenpath = path + "/adimin";
-        String othenpath = path + "/product";
+        String othenpath = path + "/admin";
+        System.out.println(othenpath);
         //数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
         dsc.setUrl("jdbc:mysql://192.168.126.151:3306/shop?useUnicode=true&useSSL=false&characterEncoding=utf8");
@@ -50,6 +53,7 @@ public class Generator {
         pathInfo.put("service_path",othenpath+"/src/main/java/com/lyl/service");
         pathInfo.put("service_impl_path",othenpath+"/src/main/java/com/lyl/service/impl");
         pathInfo.put("controller_path",othenpath+"/src/main/java/com/lyl/controller");
+        pc.setPathInfo(pathInfo);
         mpg.setPackageInfo(pc);
 //        // 自定义配置
 //        InjectionConfig cfg = new InjectionConfig() {
