@@ -90,4 +90,8 @@ public class UmsUserController {
         String message = umsUser.getActive() == 0 ? "删除用户成功" : "恢复用户成功";
         return ResultJson.success(umsUserService.updateById(umsUser),message);
     }
+    @GetMapping("/index")
+    String index() {
+        return "这里是admin中的index方法";
+    }
 }

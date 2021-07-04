@@ -1,8 +1,8 @@
 server:
-  port: 8081
+  port: 8082
 spring:
   application:
-    name: admin
+    name: product
 #    自己起名
   datasource:
     driver-class-name: com.mysql.jdbc.Driver

@@ -10,6 +10,8 @@
         <module name="pojo" />
         <module name="generator" />
         <module name="admin" />
+        <module name="bus" />
+        <module name="product" />
       </profile>
     </annotationProcessing>
   </component>

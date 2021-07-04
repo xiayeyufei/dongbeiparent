@@ -12,6 +12,8 @@
         <module>admin</module>
         <module>generator</module>
         <module>admin</module>
+        <module>product</module>
+        <module>bus</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -22,6 +24,20 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>2.2.1.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -73,11 +89,18 @@
                 <artifactId>mybatis-plus-annotation</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.lyl</groupId>
+                <artifactId>bus</artifactId>
+                <version>${lyl.version}</version>
+            </dependency>
         </dependencies>
 <!--        统一用父包项目的版本的文件 子项目在引的时候不用写版本号-->
     </dependencyManagement>
     <properties>
         <lombok.version>1.18.16</lombok.version>
+        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
         <spring-boot.version>2.2.1.RELEASE</spring-boot.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
