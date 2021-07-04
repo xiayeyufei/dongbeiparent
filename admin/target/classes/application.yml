@@ -1,0 +1,27 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: admin
+#    自己起名
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.126.151:3306/shop?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 991229
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 8
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.126.151:8848
+mybatis-plus:
+  type-aliases-package: com.lyl.pojo
+logging:
+  level:
+    com.lyl.mapper: debug
+minio:
+  endpoint: http://192.168.126.151:9000/
+  username: admin
+  password: 123456789
