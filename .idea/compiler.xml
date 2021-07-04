@@ -12,6 +12,7 @@
         <module name="admin" />
         <module name="bus" />
         <module name="product" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
   </component>

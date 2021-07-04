@@ -28,7 +28,7 @@ public class Generator {
         String pojopath = path + "/pojo";
         System.out.println(pojopath);
 //        String othenpath = path + "/adimin";
-        String othenpath = path + "/product";
+        String othenpath = path + "/admin";
         System.out.println(othenpath);
         //数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
@@ -92,7 +92,7 @@ public class Generator {
 //        strategy.setSuperControllerClass("你自己的父类控制器,没有就不用设置!");
         // 写于父类中的公共字段,id字段不用在生成了，因为继承父类了
         strategy.setSuperEntityColumns("id");
-        strategy.setInclude("pms_brand");
+        strategy.setInclude("ums_role_user");
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);

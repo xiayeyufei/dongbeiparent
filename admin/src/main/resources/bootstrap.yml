@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: admin
+#    自己起名
+  profiles:
+    active: datasource,regist,mybatis,minio
+  #      你要读那些的配置
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.126.151:8848
+        prefix: lyl
+        file-extension: yml
