@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>pojo</module>
-        <module>adimin</module>
+        <module>admin</module>
         <module>generator</module>
         <module>admin</module>
     </modules>
@@ -67,6 +67,11 @@
                 <groupId>com.lyl</groupId>
                 <artifactId>pojo</artifactId>
                 <version>${lyl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatis-plus.version}</version>
             </dependency>
         </dependencies>
 <!--        统一用父包项目的版本的文件 子项目在引的时候不用写版本号-->

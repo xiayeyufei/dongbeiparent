@@ -1,5 +1,7 @@
 package com.lyl.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.lyl.pojo.BasePojo;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -31,6 +33,7 @@ public class UmsUser extends BasePojo {
     /**
      * 密码
      */
+    @JsonIgnore
     private String password;
 
     /**
@@ -52,6 +55,13 @@ public class UmsUser extends BasePojo {
      * 用户头像
      */
     private String icon;
-
+    /**
+     * 密码明文
+     * */
+    @TableField(exist = false)
+    //告诉mybatis一声，不要修改这个字段，tablefield是表字段，false表示不是表字段，和数据的表没什么关系，就不会去查了
+    @JsonIgnore
+    //springboot的注解
+    private String rawPassword;
 
 }

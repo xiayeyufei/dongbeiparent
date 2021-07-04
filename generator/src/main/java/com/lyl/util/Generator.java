@@ -92,7 +92,7 @@ public class Generator {
 //        strategy.setSuperControllerClass("你自己的父类控制器,没有就不用设置!");
         // 写于父类中的公共字段,id字段不用在生成了，因为继承父类了
         strategy.setSuperEntityColumns("id");
-        strategy.setInclude("ums_user");
+        strategy.setInclude("img");
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);
