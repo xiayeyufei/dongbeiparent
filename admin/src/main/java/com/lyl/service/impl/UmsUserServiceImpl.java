@@ -10,6 +10,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务实现类
@@ -34,4 +36,12 @@ public class UmsUserServiceImpl extends ServiceImpl<UmsUserMapper, UmsUser> impl
         }
         return this.page(new Page<>(pageNo,pageSize),wrapper);
     }
+
+    @Override
+    public List<UmsUser> getAll() {
+        QueryWrapper<UmsUser> wrapper=new QueryWrapper<>();
+        wrapper.eq("active",1);
+        return this.list(wrapper);
+    }
+
 }

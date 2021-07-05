@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.lyl.pojo.UmsUser;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务类
@@ -15,4 +17,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IUmsUserService extends IService<UmsUser> {
     IPage<UmsUser> page(Integer pageNo, Integer pageSize, String name);
+    List<UmsUser> getAll();
 }

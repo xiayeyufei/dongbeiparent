@@ -1,14 +1,12 @@
 package com.lyl.pojo;
 
 import com.lyl.pojo.BasePojo;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 /**
  * <p>
- * 角色用户关联表
+ * 角色表
  * </p>
  *
  * @author jinyaxu
@@ -16,21 +14,19 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
-@AllArgsConstructor
-@NoArgsConstructor
-public class UmsRoleUser extends BasePojo {
+public class UmsRole extends BasePojo {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 角色id
+     * 角色名
      */
-    private Long roleId;
+    private String name;
 
     /**
-     * 用户id
+     * 是否有效
      */
-    private Long userId;
+    private Integer active;
 
 
 }
