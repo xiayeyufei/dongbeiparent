@@ -67,4 +67,9 @@ public class UmsUserController {
     String index() {
         return "这里是admin中的index方法";
     }
+
+    @PostMapping("/login")
+    ResultJson login(String username, String password) throws Exception {
+        return ResultJson.success(umsUserService.login(username, password),"登录成功");
+    }
 }
